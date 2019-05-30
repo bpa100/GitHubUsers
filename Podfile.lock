@@ -1,0 +1,16 @@
+PODS:
+  - OwlKit (1.0.3)
+
+DEPENDENCIES:
+  - OwlKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - OwlKit
+
+SPEC CHECKSUMS:
+  OwlKit: 423be408125ac9761f463d4895ec0293b119ed64
+
+PODFILE CHECKSUM: e5fd5c6efb7302a5bd82f6c3afe5d2191bc9e136
+
+COCOAPODS: 1.6.2
