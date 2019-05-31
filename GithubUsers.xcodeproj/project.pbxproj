@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C11CF016F0EDC55CA2526F01 /* Pods_GithubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9D24AF7B108C8BFABFD40B /* Pods_GithubUsers.framework */; };
+		CD0A244F22A1A46B008000E6 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A244E22A1A46B008000E6 /* DependencyContainer.swift */; };
+		CD0A245122A1A4EB008000E6 /* UsersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A245022A1A4EB008000E6 /* UsersFactory.swift */; };
 		CD715F62229EB73B0096DAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD715F61229EB73B0096DAB0 /* AppDelegate.swift */; };
 		CD715F64229EB73B0096DAB0 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD715F63229EB73B0096DAB0 /* UsersViewController.swift */; };
 		CD715F69229EB73F0096DAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD715F68229EB73F0096DAB0 /* Assets.xcassets */; };
 		CD715F6C229EB73F0096DAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD715F6A229EB73F0096DAB0 /* LaunchScreen.storyboard */; };
-		CDF3697E229EEB6600CE6FA6 /* UsersInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3697D229EEB6600CE6FA6 /* UsersInput.swift */; };
-		CDF36980229EEB7A00CE6FA6 /* UsersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3697F229EEB7A00CE6FA6 /* UsersOutput.swift */; };
+		CDF3697E229EEB6600CE6FA6 /* UsersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3697D229EEB6600CE6FA6 /* UsersOutput.swift */; };
+		CDF36980229EEB7A00CE6FA6 /* UsersInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3697F229EEB7A00CE6FA6 /* UsersInput.swift */; };
 		CDF36982229EEB9C00CE6FA6 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF36981229EEB9C00CE6FA6 /* UsersPresenter.swift */; };
 		CDF36988229EF6A700CE6FA6 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF36987229EF6A700CE6FA6 /* BackendService.swift */; };
 		CDF3698B229EF6EB00CE6FA6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3698A229EF6EB00CE6FA6 /* Endpoint.swift */; };
@@ -27,14 +29,16 @@
 /* Begin PBXFileReference section */
 		2CBABAA577CFFCAB8D06DF16 /* Pods-GithubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsers.release.xcconfig"; path = "Target Support Files/Pods-GithubUsers/Pods-GithubUsers.release.xcconfig"; sourceTree = "<group>"; };
 		6C9D24AF7B108C8BFABFD40B /* Pods_GithubUsers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUsers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0A244E22A1A46B008000E6 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CD0A245022A1A4EB008000E6 /* UsersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFactory.swift; sourceTree = "<group>"; };
 		CD715F5E229EB73B0096DAB0 /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD715F61229EB73B0096DAB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD715F63229EB73B0096DAB0 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		CD715F68229EB73F0096DAB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD715F6B229EB73F0096DAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD715F6D229EB73F0096DAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF3697D229EEB6600CE6FA6 /* UsersInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInput.swift; sourceTree = "<group>"; };
-		CDF3697F229EEB7A00CE6FA6 /* UsersOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersOutput.swift; sourceTree = "<group>"; };
+		CDF3697D229EEB6600CE6FA6 /* UsersOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersOutput.swift; sourceTree = "<group>"; };
+		CDF3697F229EEB7A00CE6FA6 /* UsersInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInput.swift; sourceTree = "<group>"; };
 		CDF36981229EEB9C00CE6FA6 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		CDF36987229EF6A700CE6FA6 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 		CDF3698A229EF6EB00CE6FA6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -64,7 +68,6 @@
 				EAACFAEC0112DE4227D4B58F /* Pods-GithubUsers.debug.xcconfig */,
 				2CBABAA577CFFCAB8D06DF16 /* Pods-GithubUsers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CD715F61229EB73B0096DAB0 /* AppDelegate.swift */,
+				CD0A244E22A1A46B008000E6 /* DependencyContainer.swift */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -145,8 +149,9 @@
 		CDF3697C229EEB1B00CE6FA6 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				CDF3697F229EEB7A00CE6FA6 /* UsersOutput.swift */,
-				CDF3697D229EEB6600CE6FA6 /* UsersInput.swift */,
+				CD0A245022A1A4EB008000E6 /* UsersFactory.swift */,
+				CDF3697F229EEB7A00CE6FA6 /* UsersInput.swift */,
+				CDF3697D229EEB6600CE6FA6 /* UsersOutput.swift */,
 				CD715F63229EB73B0096DAB0 /* UsersViewController.swift */,
 				CDF36981229EEB9C00CE6FA6 /* UsersPresenter.swift */,
 			);
@@ -310,13 +315,15 @@
 				CDF36994229EFEE400CE6FA6 /* UsersResponse.swift in Sources */,
 				CDF3698F229EFA2F00CE6FA6 /* URLSessionNetwork.swift in Sources */,
 				CDF36982229EEB9C00CE6FA6 /* UsersPresenter.swift in Sources */,
-				CDF3697E229EEB6600CE6FA6 /* UsersInput.swift in Sources */,
+				CDF3697E229EEB6600CE6FA6 /* UsersOutput.swift in Sources */,
 				CD715F64229EB73B0096DAB0 /* UsersViewController.swift in Sources */,
+				CD0A245122A1A4EB008000E6 /* UsersFactory.swift in Sources */,
 				CDF3698B229EF6EB00CE6FA6 /* Endpoint.swift in Sources */,
+				CD0A244F22A1A46B008000E6 /* DependencyContainer.swift in Sources */,
 				CD715F62229EB73B0096DAB0 /* AppDelegate.swift in Sources */,
 				CDF36988229EF6A700CE6FA6 /* BackendService.swift in Sources */,
 				CDF36997229EFF1F00CE6FA6 /* User.swift in Sources */,
-				CDF36980229EEB7A00CE6FA6 /* UsersOutput.swift in Sources */,
+				CDF36980229EEB7A00CE6FA6 /* UsersInput.swift in Sources */,
 				CDF36992229EFE9900CE6FA6 /* UsersService.swift in Sources */,
 				CDF3698D229EF98000CE6FA6 /* NetworkCore.swift in Sources */,
 			);

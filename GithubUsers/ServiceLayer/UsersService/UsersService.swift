@@ -9,15 +9,15 @@
 import Foundation
 
 protocol UsersService {
-
+    func fetchUsers(completion: ([User]) -> Void)
 }
 
-class UsersServiceImplementation {
+class UsersServiceImplementation: UsersService {
     var backendService: BackendService!
 
-    func users() {
-        backendService.request(endpoint: .users, for: User.self, completion: {o in
-            
+    func fetchUsers(completion: ([User]) -> Void) {
+        backendService.request(endpoint: .users, for: [User].self, completion: { users in
+            completion(users)
         })
     }
 }

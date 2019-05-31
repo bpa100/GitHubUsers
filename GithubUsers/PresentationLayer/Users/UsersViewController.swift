@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UsersViewController: UIViewController {
+    var presenter: UsersOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +17,9 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension UsersViewController: UsersInput {
+    
 }
 

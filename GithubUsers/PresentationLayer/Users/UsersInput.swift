@@ -1,5 +1,5 @@
 //
-//  UsersInput.swift
+//  UsersOutput.swift
 //  GithubUsers
 //
 //  Created by bakhirev on 29/05/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UsersOutput {
+protocol UsersInput: class {
     
 }

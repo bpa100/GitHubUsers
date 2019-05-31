@@ -8,4 +8,12 @@
 
 import Foundation
 
+class UsersPresenter: UsersOutput {
+    weak var view: UsersInput!
+    var service: UsersService!
+
+    init(view: UsersInput) {
+        self.view = view
+    }
+}
 
