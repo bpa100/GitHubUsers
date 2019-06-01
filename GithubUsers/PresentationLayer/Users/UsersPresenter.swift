@@ -9,11 +9,18 @@
 import Foundation
 
 class UsersPresenter: UsersOutput {
-    weak var view: UsersInput!
-    var service: UsersService!
+    weak var view: UsersInput?
+    let usersService: UsersService
 
-    init(view: UsersInput) {
+    init(view: UsersInput, usersService: UsersService) {
         self.view = view
+        self.usersService = usersService
+    }
+
+    func fetch() {
+        usersService.fetchUsers(completion: {_ in
+
+        })
     }
 }
 

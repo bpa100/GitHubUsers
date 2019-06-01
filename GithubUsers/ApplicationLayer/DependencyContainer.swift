@@ -11,8 +11,4 @@ import Foundation
 class DependencyContainer {
     // Core
     lazy var network = URLSessionNetwork()
-
-    // Services
-    lazy var backendService = BackendServiceImplementation()
-    lazy var usersService = UsersServiceImplementation()
 }

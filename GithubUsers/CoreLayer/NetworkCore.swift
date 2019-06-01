@@ -16,8 +16,7 @@ enum HTTPMethod: String {
 }
 
 protocol RequestParameters {
-    var baseUrl: URL { get }
-    var path: String { get }
+    var url: URL? { get }
     var method: HTTPMethod { get }
     var options: [String: Any]? { get }
     var headers: [String: String]? { get }
@@ -25,7 +24,7 @@ protocol RequestParameters {
 
 protocol Network {
     func performRequest(
-        options: RequestParameters,
+        parameters: RequestParameters,
         completion: @escaping (URLResponse?, Data?
         ) -> ()) -> URLSessionTask?
 }

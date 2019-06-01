@@ -12,13 +12,24 @@ protocol BackendService {
     func request<Model: Codable>(
         endpoint: Endpoint,
         for model: Model.Type,
-        completion: (Model) -> Void)
+        completion: @escaping (Model) -> Void)
 }
 
 class BackendServiceImplementation: BackendService {
-    var network: Network!
+    let network: Network
 
-    func request<Model>(endpoint: Endpoint, for model: Model.Type, completion: (Model) -> Void) where Model : Decodable, Model : Encodable {
+    init(network: Network) {
+        self.network = network
+    }
 
+    func request<Model>(endpoint: Endpoint, for model: Model.Type, completion: @escaping (Model) -> Void) where Model : Decodable, Model : Encodable {
+        _ = network.performRequest(parameters: endpoint, completion: { _, data in
+            guard let data = data,
+                let object = try? JSONDecoder().decode(model, from: data) else {
+                    return
+            }
+
+            completion(object)
+        })
     }
 }

@@ -13,11 +13,15 @@ protocol UsersService {
 }
 
 class UsersServiceImplementation: UsersService {
-    var backendService: BackendService!
+    let backendService: BackendService
+
+    init(backendService: BackendService) {
+        self.backendService = backendService
+    }
 
     func fetchUsers(completion: ([User]) -> Void) {
         backendService.request(endpoint: .users, for: [User].self, completion: { users in
-            completion(users)
+           // completion(users)
         })
     }
 }

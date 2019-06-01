@@ -9,5 +9,7 @@
 import Foundation
 
 protocol UsersOutput {
-    var view: UsersInput! {get set}
+    var view: UsersInput? { get set }
+
+    func fetch()
 }

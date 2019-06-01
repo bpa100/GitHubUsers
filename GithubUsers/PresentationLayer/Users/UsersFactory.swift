@@ -15,8 +15,7 @@ protocol UsersFactory {
 extension DependencyContainer: UsersFactory {
     func createUsersViewController() -> UsersViewController {
         let view = UsersViewController()
-        let presenter = UsersPresenter(view: view)
-        presenter.service = usersService
+        let presenter = UsersPresenter(view: view, usersService: createUsersService())
         view.presenter = presenter
         return view
     }

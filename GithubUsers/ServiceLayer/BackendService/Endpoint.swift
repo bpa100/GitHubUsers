@@ -10,15 +10,9 @@ import Foundation
 
 enum Endpoint {
     case users
-}
 
-extension Endpoint: RequestParameters {
-    var baseUrl: URL {
-        guard let url = URL(string: "https://api.github.com/") else {
-            fatalError("Incorrect base url")
-        }
-
-        return url
+    var basePath: String {
+        return "https://api.github.com/"
     }
 
     var path: String {
@@ -26,6 +20,12 @@ extension Endpoint: RequestParameters {
         case .users:
             return "users"
         }
+    }
+}
+
+extension Endpoint: RequestParameters {
+    var url: URL? {
+        return URL(string: basePath + path)
     }
 
     var method: HTTPMethod {
