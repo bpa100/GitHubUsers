@@ -27,7 +27,6 @@ class BackendServiceImplementation: BackendService {
         for model: Model.Type,
         completion: @escaping (Result<Model, Error>) -> Void) where Model : Decodable, Model : Encodable {
         _ = network.performRequest(parameters: endpoint, completion: { result in
-
             switch result {
             case .success(_, let data):
                 if let data = data,

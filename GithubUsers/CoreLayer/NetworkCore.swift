@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case invalidURL
-    case parsingError
-}
-
 enum HTTPMethod: String {
     case get = "get"
     case post = "post"

@@ -101,8 +101,8 @@ extension RepositoriesViewController: UITableViewDelegate {
         targetContentOffset: UnsafeMutablePointer<CGPoint>
         ) {
         let offsetForLoad: CGFloat = 200
-        let distance = scrollView.contentSize.height - (targetContentOffset.pointee.y + scrollView.bounds.height)
-        if distance < offsetForLoad {
+        let distanceToEnd = scrollView.contentSize.height - (targetContentOffset.pointee.y + scrollView.bounds.height)
+        if distanceToEnd < offsetForLoad {
             loadData()
         }
     }
