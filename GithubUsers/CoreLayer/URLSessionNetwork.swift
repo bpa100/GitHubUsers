@@ -9,8 +9,13 @@
 import Foundation
 
 class URLSessionNetwork: Network {
-    func performRequest(parameters: RequestParameters, completion: @escaping (URLResponse?, Data?) -> ()) -> URLSessionTask? {
+    func performRequest(
+        parameters: RequestParameters,
+        completion: @escaping (Result<(URLResponse?, Data?), Error>) -> ()
+        ) -> URLSessionTask? {
         guard let url = parameters.url else {
+            let error = NSError(domain: "invalid url", code: 0, userInfo: nil)
+            completion(.failure(error))
             return nil
         }
 
@@ -19,7 +24,12 @@ class URLSessionNetwork: Network {
 
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request, completionHandler: {data, response, error in
-            completion(response, data)
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+
+            completion(.success((response, data)))
         })
         task.resume()
         return task

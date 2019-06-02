@@ -4,6 +4,6 @@
 target 'GithubUsers' do
   use_frameworks!
 
-  pod 'OwlKit'
+  pod 'Kingfisher'
 
 end

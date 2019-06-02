@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case invalidURL
+    case parsingError
+}
+
 enum HTTPMethod: String {
     case get = "get"
     case post = "post"
@@ -18,13 +23,11 @@ enum HTTPMethod: String {
 protocol RequestParameters {
     var url: URL? { get }
     var method: HTTPMethod { get }
-    var options: [String: Any]? { get }
-    var headers: [String: String]? { get }
 }
 
 protocol Network {
     func performRequest(
         parameters: RequestParameters,
-        completion: @escaping (URLResponse?, Data?
-        ) -> ()) -> URLSessionTask?
+        completion: @escaping (Result<(URLResponse?, Data?), Error>) -> ()
+        ) -> URLSessionTask?
 }

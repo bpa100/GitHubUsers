@@ -1,16 +1,16 @@
 PODS:
-  - OwlKit (1.0.3)
+  - Kingfisher (5.5.0)
 
 DEPENDENCIES:
-  - OwlKit
+  - Kingfisher
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - OwlKit
+    - Kingfisher
 
 SPEC CHECKSUMS:
-  OwlKit: 423be408125ac9761f463d4895ec0293b119ed64
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
 
-PODFILE CHECKSUM: e5fd5c6efb7302a5bd82f6c3afe5d2191bc9e136
+PODFILE CHECKSUM: 27df6d1b92b283193be4dec146ca1632cd58a298
 
 COCOAPODS: 1.6.2

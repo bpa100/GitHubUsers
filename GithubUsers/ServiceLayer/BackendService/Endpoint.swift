@@ -9,34 +9,37 @@
 import Foundation
 
 enum Endpoint {
-    case users
-
-    var basePath: String {
-        return "https://api.github.com/"
-    }
+    case users(since: String)
+    case repositories(since: String)
 
     var path: String {
         switch self {
         case .users:
-            return "users"
+            return "/users"
+        case .repositories:
+            return "/repositories"
         }
     }
 }
 
 extension Endpoint: RequestParameters {
     var url: URL? {
-        return URL(string: basePath + path)
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.github.com"
+        components.path = path
+        components.queryItems = queryItems
+        return components.url
     }
 
     var method: HTTPMethod {
         return .get
     }
 
-    var options: [String : Any]? {
-        return nil
-    }
-
-    var headers: [String : String]? {
-        return nil
+    var queryItems: [URLQueryItem]? {
+        switch self {
+        case .users(let since), .repositories(since: let since):
+            return [URLQueryItem(name: "since", value: since)]
+        }
     }
 }
