@@ -14,6 +14,8 @@ class RepositoriesViewController: UIViewController {
     private let tableView = UITableView()
     private var repositories: [Repository] = []
 
+    private let activityIndicator = UIActivityIndicatorView(style: .gray)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,8 @@ class RepositoriesViewController: UIViewController {
         view.backgroundColor = .white
         layout()
         configureTable()
+
+        showIndication()
         loadData()
     }
 
@@ -49,10 +53,28 @@ class RepositoriesViewController: UIViewController {
     func loadData() {
         presenter.fetchRepositories(since: repositories.last)
     }
+
+    private func showIndication() {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(activityIndicator)
+
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+
+        activityIndicator.startAnimating()
+    }
+
+    private func hideIndication() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
 }
 
 extension RepositoriesViewController: RepositoriesInput {
     func show(repositories: [Repository]) {
+        hideIndication()
         self.repositories += repositories
         tableView.reloadData()
     }
